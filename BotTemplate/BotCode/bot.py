@@ -7,6 +7,7 @@ from div_array import divide_into_random_subarrays
 from generateTypos import augmentTweets
 import os
 import random
+import json
 
 #defines
 NUM_USERS=5
@@ -26,6 +27,13 @@ class Bot(ABot):
 
     def create_user(self, session_info):
         # todo logic
+
+        output = vars(session_info).copy()  # Convert object to dictionary
+        output["usernames"] = list(session_info.usernames)  # Convert set to list
+
+        # with open("create_user.txt", "w") as file:
+        #     json.dump(output, file, indent=4)
+        
         # Example:
         self.session_info = session_info
         # session_info
@@ -61,6 +69,12 @@ class Bot(ABot):
 
     def generate_content(self, datasets_json, users_list):
         # todo logic
+
+        output = datasets_json.__dict__
+
+        # with open("generate.txt", "a") as file:
+        #     json.dump(output, file, indent=4)
+
         # It needs to return json with the users and their description and the posts to be inserted.
         # Example:
         sessionNum=datasets_json.sub_session_id
