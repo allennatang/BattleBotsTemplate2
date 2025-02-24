@@ -11,12 +11,12 @@ from api_requests import get_session_info, create_user_id, get_sub_session, subm
 import json
 
 # Competition Environment Variables
-session_id = int(os.getenv('SESSION_ID'))
-code_max_time = int(os.getenv('MAX_TIME'))
+# session_id = int(os.getenv('SESSION_ID'))
+# code_max_time = int(os.getenv('MAX_TIME'))
 
 # Testing Environment Variables
-# session_id = 12
-# code_max_time = 3601
+session_id = 12
+code_max_time = 3601
 
 logging.basicConfig(
     filename='run.log',
@@ -51,8 +51,8 @@ def main():
 
         # Give the session info to the bot teams and the id of the present sub_session and receive from their create_user
         # function their new users
-        signal.signal(signal.SIGALRM, handler)
-        signal.alarm(code_max_time)
+        # signal.signal(signal.SIGALRM, handler)
+        # signal.alarm(code_max_time)
         
         
         new_users = bot.create_user(session_info)
@@ -121,7 +121,7 @@ def main():
             print("Inject Sub-Session response status code:", submission_confirmation.status_code)
             #print(f"Inject Sub-Session output: {json.dumps(submission_confirmation.json(), indent=4)}\n- - - - -")
 
-        signal.alarm(0)
+        # signal.alarm(0)
         # Maybe add time stamp for analysis.
         logging.info(f"END SESSION {session_id}")
 

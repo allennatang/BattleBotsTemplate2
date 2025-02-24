@@ -50,15 +50,15 @@ def getResponse(theMessages, model_name=MODEL_NAME, out_response_format="text"):
     },
     temperature=1,
     max_completion_tokens=16384,
-    presence_penalty=2.0
+    presence_penalty=0.0
     )
     return response
 
 def save_results_to_file(generatedResults, file):
     # generatedResults = results.choices[0].message.content
-    with open(file, "a") as f:
+    with open(file, "a", encoding="utf-8") as f:
         f.write(generatedResults)
-    # print(f"Content saved to {file}")
+    print(f"Content saved to {file}")
 
 
 def generateTweets(tweet_sample_size=TWEETS_SIZE):
@@ -73,13 +73,13 @@ def generateTweets(tweet_sample_size=TWEETS_SIZE):
     # print("Total tokens used by tweet prompt: %s"%num_tokens_from_string(tweet_prompt, ENCODING_NAME))
 
     tweet_message=messages=[
-            {"role": "system", "content": "You are a creative assistant that generates realistic tweets. No links, use \"https://t.co/twitter_link\" instead. No mentions, use \"@mention\" instead."},
+            {"role": "system", "content": "You are a creative assistant that generates realistic tweets. Act like a white man in his early 30's who is strongly opinionated. Your tone should be serious w/ a hint of wit and sarcasm. No links, use \"https://t.co/twitter_link\" instead. No mentions, use \"@mention\" instead."},
             {"role": "user", "content": tweet_prompt}
         ]
 
     tweets_response = getResponse(tweet_message)
     tweets_response_content=tweets_response.choices[0].message.content
-    # save_results_to_file(tweets_response_content,tweetSaveFile)
+    save_results_to_file(tweets_response_content,tweetSaveFile)
 
     def parse_tweets(line):
         # Regular expression to capture the content inside quotes
@@ -117,7 +117,7 @@ def generateUsers(user_sample_size=USERS_SIZE):
 
     users_response = getResponse(user_messages, out_response_format="text")
     users_response_content=users_response.choices[0].message.content
-    # save_results_to_file(users_response_content,userSaveFile)
+    save_results_to_file(users_response_content,userSaveFile)
 
     # Function to parse a single line of user metadata
     def parse_user_metadata(line):
