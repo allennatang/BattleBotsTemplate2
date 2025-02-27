@@ -1,0 +1,762 @@
+{
+  "users": [
+    {
+      "is_bot": false,
+      "tweet_count": 33,
+      "z_score": 0.3330947674,
+      "username": "JimmySportPicks",
+      "name": "Jimmy’s Sport Picks",
+      "description": "🏀 Over 10+ years experience betting on sports. I do all the research & analysis so you don’t have to. Follow me for March Madness & more. 21+",
+      "location": "📱 My FREE Discord",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": true,
+          "confidence": 100
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 12
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 53
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 54
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "bot_team_id": -1,
+      "bot_team_name": "Not A Bot",
+      "user_id": "64524967",
+      "tweet_count": 39,
+      "z_score": 0.2375295238,
+      "username": "Dino_Bishop",
+      "name": "Wizard",
+      "description": "🏧Unaccepted.",
+      "location": "At the 🏧",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": true,
+          "confidence": 100
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 55
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 2
+        },
+        {
+          "teamName": "maddydetector2",
+          "isBot": false,
+          "confidence": 81
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 85
+        },
+        {
+          "teamName": "seunghyundetector3",
+          "isBot": false,
+          "confidence": 48
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 48
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "bot_team_id": -1,
+      "bot_team_name": "Not A Bot",
+      "user_id": "1772074203061063680",
+      "tweet_count": 96,
+      "z_score": 2.4880264963,
+      "username": "PaulaBrads68942",
+      "name": "Paula Bradshaw",
+      "description": "",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": true,
+          "confidence": 100
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": true,
+          "confidence": 99
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": true,
+          "confidence": 27
+        },
+        {
+          "teamName": "maddydetector2",
+          "isBot": false,
+          "confidence": 82
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": true,
+          "confidence": 52
+        },
+        {
+          "teamName": "seunghyundetector3",
+          "isBot": false,
+          "confidence": 21
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 21
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "tweet_count": 8,
+      "z_score": -0.8701321731,
+      "username": "Kotkaniemiera",
+      "name": "Drew",
+      "description": "",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": true,
+          "confidence": 28
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 28
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 52
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "865881053277417473",
+      "tweet_count": 21,
+      "z_score": -0.244454164,
+      "username": "ValentineTrvth",
+      "name": "William Valentine Lekala",
+      "description": "KING👑",
+      "location": "Welkom, South Africa",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 51
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 40
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "tweet_count": 17,
+      "z_score": -0.4369704745,
+      "username": "ChrisDPOMAY",
+      "name": "Chris Pomay",
+      "description": "Radio Host of Live With CDP Sports Talk on WQEE 99.1 FM in Georgia,  CKRT (Border City Radio) in Windsor, Ontario.\nhttps://t.co/twitter_link",
+      "location": "Southern Ontario ",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": true,
+          "confidence": 28
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 77
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 52
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "1233151813634928641",
+      "tweet_count": 25,
+      "z_score": -0.0519378535,
+      "username": "GazAdele2130",
+      "name": "Gaz",
+      "description": "Music fan(rock. Indie. Adele) football(Chelsea) B. L. M.",
+      "location": "London, England",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": true,
+          "confidence": 95
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 51
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 30
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 35
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "1602742135438163971",
+      "tweet_count": 10,
+      "z_score": -0.7738740178,
+      "username": "Yxnghitman",
+      "name": "🎚️",
+      "description": "Chelsea FC | Music enthusiast | Hitman in the making 💯",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 52
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 47
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "bot_team_id": -1,
+      "bot_team_name": "Not A Bot",
+      "user_id": "1054879035015217152",
+      "tweet_count": 12,
+      "z_score": -0.8284953579,
+      "username": "toulusegay",
+      "name": "jk",
+      "description": "",
+      "location": "hell ",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 100
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 2
+        },
+        {
+          "teamName": "maddydetector2",
+          "isBot": false,
+          "confidence": 95
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 87
+        },
+        {
+          "teamName": "seunghyundetector3",
+          "isBot": false,
+          "confidence": 63
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 63
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "bot_team_id": -1,
+      "bot_team_name": "Not A Bot",
+      "user_id": "1681445046669701120",
+      "tweet_count": 10,
+      "z_score": -0.9074601639,
+      "username": "DL2Muse",
+      "name": "Dereck Lively II Muse",
+      "description": "Fan 𝕏 page for Mavs’ center, 2024 Rising Star, & future Defensive Player of the Year Dereck Lively II. Not affiliated with @statmuse or @DereckLively. #mffl",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": true,
+          "confidence": 99
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 2
+        },
+        {
+          "teamName": "maddydetector2",
+          "isBot": false,
+          "confidence": 78
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 87
+        },
+        {
+          "teamName": "seunghyundetector3",
+          "isBot": false,
+          "confidence": 65
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 65
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "tweet_count": 7,
+      "z_score": -0.9182612507,
+      "username": "MofokengXis",
+      "name": "chriszico🇿🇦",
+      "description": "Letterboxd https://t.co/twitter_link\n                         Fav Movie: Top Gun: Maverick\n                         29/m",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 12
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 78
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 56
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "bot_team_id": -1,
+      "bot_team_name": "Not A Bot",
+      "user_id": "1752741446665285632",
+      "tweet_count": 28,
+      "z_score": -0.1967769095,
+      "username": "penishernande2",
+      "name": "penis hernandez (reprise)",
+      "description": "new to this need the info",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 54
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 2
+        },
+        {
+          "teamName": "maddydetector2",
+          "isBot": false,
+          "confidence": 89
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 85
+        },
+        {
+          "teamName": "seunghyundetector3",
+          "isBot": false,
+          "confidence": 68
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 68
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "tweet_count": 20,
+      "z_score": -0.2925832416,
+      "username": "Jamal05609349",
+      "name": "lakers in 4",
+      "description": "if u a casual stay off my page🤣 #lakeshow bears fan 🐻",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": true,
+          "confidence": 28
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 22
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 58
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "972982132548292609",
+      "tweet_count": 35,
+      "z_score": 0.4293529226,
+      "username": "travelingwilbri",
+      "name": "bri🧸 semi ia",
+      "description": "🎗🇵🇸 i love george harrison. that's all this account is. #beatlestwt & co-ceo of hazzatwt🪲💜 mdni w/ nsfw posts ▪︎  edtwt/fatphobes dni. nyc ॐ",
+      "location": "19 she/they • 4/11 featles",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": true,
+          "confidence": 95
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 56
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 30
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 57
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "1677143125519728644",
+      "tweet_count": 21,
+      "z_score": -0.244454164,
+      "username": "HockeyMaster33",
+      "name": "Daniel Offerdahl",
+      "description": "You won't find a bigger fan of hockey than me. \n\nI know more than you.",
+      "location": "Here, There, Everywhere",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": true,
+          "confidence": 100
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 52
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 21
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "156656889",
+      "tweet_count": 14,
+      "z_score": -0.5813577074,
+      "username": "SirBrendenJace",
+      "name": "Quieres más tequila?!",
+      "description": "",
+      "location": "I ain’t that outside.",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 51
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 65
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "1178208042053181443",
+      "tweet_count": 7,
+      "z_score": -0.9182612507,
+      "username": "MofokengXis",
+      "name": "chriszico🇿🇦",
+      "description": "Letterboxd https://t.co/twitter_link\n                         Fav Movie: Top Gun: Maverick\n                         29/m",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 56
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 5
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 78
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "tweet_count": 15,
+      "z_score": -0.5332286297,
+      "username": "Rebound14196658",
+      "name": "90sKnicksFan33",
+      "description": "Long-time Knicks Fan, Lawyer, NewYorkForever",
+      "location": null,
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 12
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 56
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 54
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "tweet_count": 29,
+      "z_score": 0.1405784569,
+      "username": "femboyautoparts",
+      "name": "#1 Ukkolyte",
+      "description": "football take haver. go bandits. coined the term ukkolyte made the apology form and the buffalo mentioned meme\n\nhttps://t.co/twitter_link",
+      "location": "Buffalo",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": true,
+          "confidence": 28
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 67
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 58
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "1476071254406967297",
+      "tweet_count": 55,
+      "z_score": 1.391934475,
+      "username": "PHILLYXFREEDOM",
+      "name": "Freedom (Thank You, Jason/Dannyplan Believer)",
+      "description": "Victim of Philadelphia sports | @FREEDOMPRIV",
+      "location": "610/215 or Broad/Pattison",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 50
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 52
+        },
+        {
+          "teamName": "marieelisedetector2",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 40
+        }
+      ]
+    }
+  ]
+}

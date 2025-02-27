@@ -44,27 +44,48 @@ for post in all_posts:
 
 random.shuffle(real_posts)
 
-# Generate a random prompt from the real posts
+# Select a random sample of real tweets and return as json object, to be passed to GPT as a prompt
 def getTweets(n=50):
-    prompt = ""
-    selected_posts = random.sample(real_posts, min(n, len(real_posts)))  # Avoid IndexError if n > len(real_posts)
-    for i, post in enumerate(selected_posts, 1):
-        prompt += f"{i}: \"{post['text']}\"\n"
-    return prompt
 
-real_users=[]
+    # Initialize dictionary of tweets
+    tweets_dict = {"tweets":[]}
+
+    # Take a random sample of n posts and append them to the dictionary
+    selected_posts = random.sample(real_posts, min(n, len(real_posts))) # Use min to avoid IndexError if n > len(real_posts)
+    for post in selected_posts:
+        tweets_dict["tweets"].append(post['text'])
+
+    # Convert dictionary to json
+    tweets_json = json.dumps(tweets_dict)
+    
+    return tweets_json
+
+# Parse the real users. Refactor this later.
+# Dict
+real_users = {'users':[]}
 for user in all_users:
     if not user['is_bot']:
-        real_users.append(user)
+        real_users['users'].append(user)
 
-random.shuffle(real_users)
-# print(real_users[0])
+random.shuffle(real_users['users'])
 
-def getUsernames(n=50):
-    prompt = ""
-    selected_users = random.sample(real_users, min(n, len(real_users)))  # Avoid IndexError if n > len(real_posts)
-    for i, user in enumerate(selected_users, 1):
-        prompt += f"{i}: Name - \"{user['name']}\" username - \"{user['username']}\" description - \"{user['description']}\" location - \"{user['location']}\"\n"
-    return prompt
+# Select a random sample of real users and return as json object, to be passed to GPT as a prompt
+def getUsernames(n):
 
+    users_dict = {'users':[]}
+    # Take a random sample of n posts and append them to the dictionary
+    selected_users = random.sample(real_users['users'], min(n, len(real_users['users'])))  # Avoid IndexError if n > len(real_posts)
+
+    for user in selected_users:
+        users_dict["users"].append(user)
+
+    # Store in a file
+    with open("random_sample_users.json", "w") as f:
+        json.dump(users_dict, f)
+    
+    # Convert dictionary to json
+    users_json = json.dumps(users_dict)
+    
+    return users_json
+    
 # print(getUsernames(50))

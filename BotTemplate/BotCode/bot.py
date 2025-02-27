@@ -10,7 +10,7 @@ import random
 import json
 
 #defines
-NUM_USERS=5
+NUM_USERS=1
 
 class Bot(ABot):
     def get_normal_subset(self, ap, sd_ap, minsize, totTweets, tweets):
@@ -31,9 +31,6 @@ class Bot(ABot):
         output = vars(session_info).copy()  # Convert object to dictionary
         output["usernames"] = list(session_info.usernames)  # Convert set to list
 
-        # with open("create_user.txt", "w") as file:
-        #     json.dump(output, file, indent=4)
-        
         # Example:
         self.session_info = session_info
         # session_info
@@ -43,7 +40,8 @@ class Bot(ABot):
         self.sd_aP=self.aP/4
 
         #get user info
-        users=generateUsers()
+        prompt = "Make the user a teenage girl. Use only lowercase, and make her live somewhere trendy."
+        users=generateUsers(prompt)
 
         # add user info
         new_users=[]
@@ -51,10 +49,15 @@ class Bot(ABot):
             new_users.append(NewUser(username=users[i]['username'],name=users[i]['name'],description=users[i]['description'],location=users[i]['location']   ))
 
         self.users_post_info = {}
+
+        # Fix later
+        tweet_prompt = "Use only lowercase, and talk like a teenager girl. Be sarcastic and sassy."
         # Populate the dictionary with data from each user's file
         for user in new_users:
-            tweets=generateTweets()
-            tweets=augmentTweets(tweets)
+            tweets=generateTweets(tweet_prompt)
+
+            # I don't want to include typos
+            #tweets=augmentTweets(tweets)
             totSessions=len(self.session_info.sub_sessions_info)
             # print(self.session_info)
             totTweets=len(tweets)
@@ -62,8 +65,76 @@ class Bot(ABot):
             # print(len(desiredTweets))
             # print(desiredTweets)
 
+            # Simulating how users post tweets over different time periods.
             self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
+
         # print(self.users_post_info)
+
+        # GENERATE 2nd USER
+        prompt = "Create a user that is white man in his early 30's. He lives somewhere suburban."
+        users=generateUsers(prompt)
+        new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
+
+        # Fix later
+        tweet_prompt = "Act like a white man in his early 30's who is strongly opinionated. Your tone should be serious."
+        # Populate the dictionary with data from each user's file
+        user = new_users[1]
+        tweets=generateTweets(tweet_prompt)
+        #tweets=augmentTweets(tweets)
+        totSessions=len(self.session_info.sub_sessions_info)
+        # print(self.session_info)
+        totTweets=len(tweets)
+        desiredTweets=self.get_normal_subset(self.aP, self.sd_aP, 10, totTweets, tweets)
+        # print(len(desiredTweets))
+        # print(desiredTweets)
+
+        # Simulating how users post tweets over different time periods.
+        self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
+
+        # GENERATE 3rd USER
+
+        prompt = "Create a user that is an old, British man in his 70's."
+        users=generateUsers(prompt)
+        new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
+
+        # Fix later
+        tweet_prompt = "Act like a old, British man in his 70's. You are very confused about technology, and ask many questions, not quite understanding how Twitter works and if anyone else can see what you post."
+        # Populate the dictionary with data from each user's file
+        user = new_users[2]
+        tweets=generateTweets(tweet_prompt)
+        #tweets=augmentTweets(tweets)
+        totSessions=len(self.session_info.sub_sessions_info)
+        # print(self.session_info)
+        totTweets=len(tweets)
+        desiredTweets=self.get_normal_subset(self.aP, self.sd_aP, 10, totTweets, tweets)
+        # print(len(desiredTweets))
+        # print(desiredTweets)
+
+        # Simulating how users post tweets over different time periods.
+        self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
+
+        # GENERATE 4TH USER
+
+        prompt = "Create a user that is a high-powered career woman, working as the CEO of a large company"
+        users=generateUsers(prompt)
+        new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
+
+        # Fix later
+        tweet_prompt = "Act like a a high-powered career woman, working as the CEO of a large company. You like to use Twitter to connect with and expand your network. You often post about career openings at your company, as well as initiatives you or your company are doing."
+        # Populate the dictionary with data from each user's file
+        user = new_users[3]
+        tweets=generateTweets(tweet_prompt)
+        #tweets=augmentTweets(tweets)
+        totSessions=len(self.session_info.sub_sessions_info)
+        # print(self.session_info)
+        totTweets=len(tweets)
+        desiredTweets=self.get_normal_subset(self.aP, self.sd_aP, 10, totTweets, tweets)
+        # print(len(desiredTweets))
+        # print(desiredTweets)
+
+        # Simulating how users post tweets over different time periods.
+        self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
+
 
         return new_users
 
@@ -107,7 +178,6 @@ class Bot(ABot):
                 tweetTime=sample_time(self.session_info.metadata["user_distribution_across_time"], sessionStartTime, sessionEndTime)
                 posts.append(NewPost(text=subsesh_tweets_by_user[i], author_id=userId, created_at=tweetTime, user=curUser))
             # posts.append(NewPost(text="Pandas are amazing!", author_id=users_list[j].user_id, created_at='2024-08-18T00:20:30.000Z',user=users_list[j]))
-
         return posts
         
         
