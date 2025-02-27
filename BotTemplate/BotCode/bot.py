@@ -44,6 +44,8 @@ class Bot(ABot):
 
         #get user info
         users=generateUsers()
+        # print("look here")
+        # print(users)
 
         # add user info
         new_users=[]
@@ -62,7 +64,9 @@ class Bot(ABot):
             # print(len(desiredTweets))
             # print(desiredTweets)
 
+            # Simulating how users post tweets over different time periods.
             self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
+
         # print(self.users_post_info)
 
         return new_users
