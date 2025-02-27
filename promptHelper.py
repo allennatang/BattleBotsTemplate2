@@ -70,7 +70,7 @@ for user in all_users:
 random.shuffle(real_users['users'])
 
 # Select a random sample of real users and return as json object, to be passed to GPT as a prompt
-def getUsernames(n=50):
+def getUsernames(n):
 
     users_dict = {'users':[]}
     # Take a random sample of n posts and append them to the dictionary

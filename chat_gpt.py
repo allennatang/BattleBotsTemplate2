@@ -45,7 +45,7 @@ def save_results_to_file(generatedResults, file):
     print(f"Content saved to {file}")
 
 # Generate the tweets which will be passed as chat history into OpenAI's chat completion API
-def generateTweets(tweet_sample_size=TWEETS_SIZE):
+def generateTweets(prompt, tweet_sample_size=TWEETS_SIZE):
 
     # Get a random subset of real user tweets from the competition's subsession info
     tweets_dataset=getTweets(tweet_sample_size)
@@ -58,6 +58,7 @@ def generateTweets(tweet_sample_size=TWEETS_SIZE):
                 Generate tweets in a similar format to the following dataset.:
                 {tweets_dataset}
                 """
+    user_prompt += prompt
     # user_prompt = f"""
     #             Generate 50 tweets in a similar format to the following dataset. Return in a json format:
     #             {tweets_dataset}
@@ -82,7 +83,7 @@ def generateTweets(tweet_sample_size=TWEETS_SIZE):
     return tweets_data['tweets']
 
 
-def generateUsers(user_sample_size=USERS_SIZE):
+def generateUsers(prompt, user_sample_size=USERS_SIZE):
     users_dataset=getUsernames(user_sample_size)
 
     # Prompt to generate new users
@@ -91,6 +92,8 @@ def generateUsers(user_sample_size=USERS_SIZE):
                 {users_dataset}
                 Format it as json, but remove the triple backticks and language specifier.
                 """
+    
+    user_prompt += prompt
 
     user_messages=[
         {"role": "system", "content": "You are a creative assistant that generates realistic twitter user metadata."},
