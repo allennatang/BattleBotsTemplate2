@@ -1,6 +1,6 @@
 from pydantic import BaseModel # For creating structured data models (JSON) to pass to GPT
 from openai import OpenAI 
-from promptHelper import getTweets, getUsernames
+from helper_code.promptHelper import getTweets, getUsernames
 import re
 from dotenv import load_dotenv
 import os
@@ -55,7 +55,7 @@ def generateTweets(prompt, tweet_sample_size=TWEETS_SIZE):
 
     # Second part of the GPT prompt - the task it should respond to
     user_prompt = f"""
-                Generate tweets in a similar format to the following dataset.:
+                Generate tweets in French in a similar format to the following dataset.:
                 {tweets_dataset}
                 """
     user_prompt += prompt

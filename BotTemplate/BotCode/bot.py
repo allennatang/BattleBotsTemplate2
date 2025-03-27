@@ -1,10 +1,10 @@
 #imports
 from abc_classes import ABot
 from teams_classes import NewUser, NewPost
-from chat_gpt import generateTweets, generateUsers
-from getTime import sample_time
+from helper_code.chat_gpt import generateTweets, generateUsers
+from helper_code.getTime import sample_time
 from div_array import divide_into_random_subarrays
-from generateTypos import augmentTweets
+from helper_code.generateTypos import augmentTweets
 import os
 import random
 import json
@@ -40,7 +40,7 @@ class Bot(ABot):
         self.sd_aP=self.aP/4
 
         #get user info
-        prompt = "Make the user a teenage girl. Use only lowercase, and make her live somewhere trendy."
+        prompt = "Make the user a teenage girl. Use only lowercase, and make her live somewhere trendy. Make her info in french"
         users=generateUsers(prompt)
 
         # add user info
@@ -51,7 +51,7 @@ class Bot(ABot):
         self.users_post_info = {}
 
         # Fix later
-        tweet_prompt = "Use only lowercase, and talk like a teenager girl. Be sarcastic and sassy."
+        tweet_prompt = "Use only lowercase, and talk like a teenager girl. Be sarcastic and sassy. Make her speak in french"
         # Populate the dictionary with data from each user's file
         for user in new_users:
             tweets=generateTweets(tweet_prompt)
@@ -59,6 +59,11 @@ class Bot(ABot):
             # I don't want to include typos
             #tweets=augmentTweets(tweets)
             totSessions=len(self.session_info.sub_sessions_info)
+
+            print("TESTING")
+            print(self.session_info.sub_sessions_info)
+
+
             # print(self.session_info)
             totTweets=len(tweets)
             desiredTweets=self.get_normal_subset(self.aP, self.sd_aP, 10, totTweets, tweets)
@@ -71,12 +76,12 @@ class Bot(ABot):
         # print(self.users_post_info)
 
         # GENERATE 2nd USER
-        prompt = "Create a user that is white man in his early 30's. He lives somewhere suburban."
+        prompt = "Create a user that is white man in his early 30's. He lives somewhere suburban. Make his info in french"
         users=generateUsers(prompt)
         new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
 
         # Fix later
-        tweet_prompt = "Act like a white man in his early 30's who is strongly opinionated. Your tone should be serious."
+        tweet_prompt = "Act like a white man in his early 30's who is strongly opinionated. Your tone should be serious. Make him speak in french"
         # Populate the dictionary with data from each user's file
         user = new_users[1]
         tweets=generateTweets(tweet_prompt)
@@ -93,12 +98,12 @@ class Bot(ABot):
 
         # GENERATE 3rd USER
 
-        prompt = "Create a user that is an old, British man in his 70's."
+        prompt = "Create a user that is an old, British man in his 70's. Make his info in french"
         users=generateUsers(prompt)
         new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
 
         # Fix later
-        tweet_prompt = "Act like a old, British man in his 70's. You are very confused about technology, and ask many questions, not quite understanding how Twitter works and if anyone else can see what you post."
+        tweet_prompt = "Act like a old, British man in his 70's. You are very confused about technology, and ask many questions, not quite understanding how Twitter works and if anyone else can see what you post. Make him speak in french."
         # Populate the dictionary with data from each user's file
         user = new_users[2]
         tweets=generateTweets(tweet_prompt)
@@ -115,12 +120,12 @@ class Bot(ABot):
 
         # GENERATE 4TH USER
 
-        prompt = "Create a user that is a high-powered career woman, working as the CEO of a large company"
+        prompt = "Create a user that is a high-powered career woman, working as the CEO of a large company. make her info in french"
         users=generateUsers(prompt)
         new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
 
         # Fix later
-        tweet_prompt = "Act like a a high-powered career woman, working as the CEO of a large company. You like to use Twitter to connect with and expand your network. You often post about career openings at your company, as well as initiatives you or your company are doing."
+        tweet_prompt = "Act like a a high-powered career woman, working as the CEO of a large company. You like to use Twitter to connect with and expand your network. You often post about career openings at your company, as well as initiatives you or your company are doing. Make him speak in french"
         # Populate the dictionary with data from each user's file
         user = new_users[3]
         tweets=generateTweets(tweet_prompt)

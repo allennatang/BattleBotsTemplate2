@@ -1,1 +1,90 @@
-{"users": [{"is_bot": false, "bot_team_id": -1, "bot_team_name": "Not A Bot", "user_id": "1928374650123456789", "tweet_count": 128, "z_score": 3.125769412, "username": "CEOEmilyN", "name": "Emily Novak", "description": "CEO at Global Innovations Inc. | Passionate about leadership, mentorship, and empowering women in business. 🌟 | Speaker & Advocate for Diversity", "location": "New York, NY", "detectors": [{"teamName": "marieelisedetector1", "isBot": false, "confidence": 1}, {"teamName": "seunghyundetector2", "isBot": false, "confidence": 55}, {"teamName": "maddydetector1", "isBot": false, "confidence": 48}, {"teamName": "maddydetector2", "isBot": false, "confidence": 66}, {"teamName": "marieelisedetector2", "isBot": false, "confidence": 82}, {"teamName": "seunghyundetector3", "isBot": false, "confidence": 39}, {"teamName": "seunghyundetector1", "isBot": false, "confidence": 42}]}]}
+{
+  "users": [
+    {
+      "is_bot": false,
+      "user_id": "1705644990230138882",
+      "tweet_count": 25,
+      "z_score": -0.2187075345,
+      "username": "aurelle_chic",
+      "name": "aurelle",
+      "description": "teenage girl | passionnée de mode et de café | membre de la génération Z 🌸✨ | paris, la ville des rêves",
+      "location": "paris, france",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 12
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 54
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 50
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "1705644990230138883",
+      "tweet_count": 18,
+      "z_score": 0.3559767329,
+      "username": "laura_vibes",
+      "name": "laura",
+      "description": "✨ rêveuse et artiste | je partage mes créations et mes pensées | accro aux bonbons 🍭💖 | nice, sur la côte d'azur",
+      "location": "nice, france",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 2
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 56
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 39
+        }
+      ]
+    },
+    {
+      "is_bot": false,
+      "user_id": "1705644990230138884",
+      "tweet_count": 22,
+      "z_score": -0.6105327314,
+      "username": "celine_style",
+      "name": "céline",
+      "description": "fashion enthusiast | amour de la musique indie et des cafés à la mode | je vis pour les soirées entre amis 🎶☕ | lyon, france",
+      "location": "lyon, france",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 1
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 14
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 47
+        }
+      ]
+    }
+  ]
+}

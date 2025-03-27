@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "is_bot": false,
+      "user_id": "1847263849275966483",
+      "tweet_count": 42,
+      "z_score": 1.997301341,
+      "username": "BizBossEmma",
+      "name": "Emma Harrison",
+      "description": "CEO of Innovative Solutions Inc. 🚀 | Passionate about tech, leadership, and empowering women in business | Coffee addict ☕ | #WomenInLeadership",
+      "location": "Silicon Valley, CA",
+      "detectors": [
+        {
+          "teamName": "marieelisedetector1",
+          "isBot": false,
+          "confidence": 2
+        },
+        {
+          "teamName": "maddydetector1",
+          "isBot": false,
+          "confidence": 22
+        },
+        {
+          "teamName": "seunghyundetector1",
+          "isBot": false,
+          "confidence": 67
+        },
+        {
+          "teamName": "seunghyundetector2",
+          "isBot": false,
+          "confidence": 55
+        }
+      ]
+    }
+  ]
+}

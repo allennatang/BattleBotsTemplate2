@@ -3,8 +3,9 @@ import re
 import random
 
 # List of filenames to read
-FILENAMES = ["session_3_results.json", "session_4_results.json", "session_5_results.json"]
+FILENAMES = ["data/session_3_results.json", "data/session_4_results.json", "data/session_5_results.json"]
 
+# Is this being used??
 # Function to clean and load JSON data
 def load_and_clean_json(filename):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -41,6 +42,7 @@ for post in all_posts:
         bot_posts.append(post)
     else:
         real_posts.append(post)
+
 
 random.shuffle(real_posts)
 
