@@ -68,70 +68,6 @@ class Bot(ABot):
             # Simulating how users post tweets over different time periods.
             self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
 
-        # print(self.users_post_info)
-
-        # GENERATE 2nd USER
-        prompt = "Create a user that is white man in his early 30's. He lives somewhere suburban."
-        users=generateUsers(prompt)
-        new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
-
-        # Fix later
-        tweet_prompt = "Act like a white man in his early 30's who is strongly opinionated. Your tone should be serious."
-        # Populate the dictionary with data from each user's file
-        user = new_users[1]
-        tweets=generateTweets(tweet_prompt)
-        #tweets=augmentTweets(tweets)
-        totSessions=len(self.session_info.sub_sessions_info)
-        # print(self.session_info)
-        totTweets=len(tweets)
-        desiredTweets=self.get_normal_subset(self.aP, self.sd_aP, 10, totTweets, tweets)
-        # print(len(desiredTweets))
-        # print(desiredTweets)
-
-        # Simulating how users post tweets over different time periods.
-        self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
-
-        # GENERATE 3rd USER
-
-        prompt = "Create a user that is an old, British man in his 70's."
-        users=generateUsers(prompt)
-        new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
-
-        # Fix later
-        tweet_prompt = "Act like a old, British man in his 70's. You are very confused about technology, and ask many questions, not quite understanding how Twitter works and if anyone else can see what you post."
-        # Populate the dictionary with data from each user's file
-        user = new_users[2]
-        tweets=generateTweets(tweet_prompt)
-        #tweets=augmentTweets(tweets)
-        totSessions=len(self.session_info.sub_sessions_info)
-        # print(self.session_info)
-        totTweets=len(tweets)
-        desiredTweets=self.get_normal_subset(self.aP, self.sd_aP, 10, totTweets, tweets)
-        # print(len(desiredTweets))
-        # print(desiredTweets)
-
-        # Simulating how users post tweets over different time periods.
-        self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
-
-        # GENERATE 4TH USER
-
-        prompt = "Create a user that is a high-powered career woman, working as the CEO of a large company"
-        users=generateUsers(prompt)
-        new_users.append(NewUser(username=users[0]['username'],name=users[0]['name'],description=users[0]['description'],location=users[0]['location']   ))
-
-        # Fix later
-        tweet_prompt = "Act like a a high-powered career woman, working as the CEO of a large company. You like to use Twitter to connect with and expand your network. You often post about career openings at your company, as well as initiatives you or your company are doing."
-        # Populate the dictionary with data from each user's file
-        user = new_users[3]
-        tweets=generateTweets(tweet_prompt)
-        #tweets=augmentTweets(tweets)
-        totSessions=len(self.session_info.sub_sessions_info)
-        # print(self.session_info)
-        totTweets=len(tweets)
-        desiredTweets=self.get_normal_subset(self.aP, self.sd_aP, 10, totTweets, tweets)
-        # print(len(desiredTweets))
-        # print(desiredTweets)
-
         # Simulating how users post tweets over different time periods.
         self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
 
@@ -141,6 +77,7 @@ class Bot(ABot):
     def generate_content(self, datasets_json, users_list):
         # todo logic
 
+        print(datasets_json.posts)
         output = datasets_json.__dict__
 
         # with open("generate.txt", "a") as file:
