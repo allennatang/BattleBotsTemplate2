@@ -76,9 +76,11 @@ class Bot(ABot):
 
     def generate_content(self, datasets_json, users_list):
         # todo logic
-
-        print(datasets_json.posts)
         output = datasets_json.__dict__
+
+        
+        # Extracting the text content
+        tweet_texts = [tweet['text'] for tweet in datasets_json.posts]
 
         # with open("generate.txt", "a") as file:
         #     json.dump(output, file, indent=4)
@@ -114,6 +116,8 @@ class Bot(ABot):
             for i in range(totTweets):
                 tweetTime=sample_time(self.session_info.metadata["user_distribution_across_time"], sessionStartTime, sessionEndTime)
                 posts.append(NewPost(text=subsesh_tweets_by_user[i], author_id=userId, created_at=tweetTime, user=curUser))
+                posts.append(NewPost(text=random.choice(tweet_texts), author_id=userId, created_at=tweetTime, user=curUser))
+
             # posts.append(NewPost(text="Pandas are amazing!", author_id=users_list[j].user_id, created_at='2024-08-18T00:20:30.000Z',user=users_list[j]))
         return posts
         

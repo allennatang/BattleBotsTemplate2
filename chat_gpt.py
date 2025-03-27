@@ -16,7 +16,7 @@ MODEL_NAME = "gpt-4o-mini"
 ENCODING_NAME = "o200k_base"
 
 # Define number of tweets and users to generate
-TWEETS_SIZE=60
+TWEETS_SIZE=30
 USERS_SIZE=20
 
 # Define the files to save the generated tweets and users
