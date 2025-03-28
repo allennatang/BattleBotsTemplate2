@@ -10,9 +10,14 @@ import random
 import json
 
 #defines
-NUM_USERS=1
+NUM_USERS=5
 
 class Bot(ABot):
+
+    # This stores the users and posts so that all functions can access them.
+    global_session_info = None
+
+    # David's function
     def get_normal_subset(self, ap, sd_ap, minsize, totTweets, tweets):
         # Generate a normal sample
         n = int(random.gauss(ap, sd_ap))
@@ -25,11 +30,20 @@ class Bot(ABot):
         
         return subset
 
+    # Default function
+    # session_info contains USER INFO ONLY
     def create_user(self, session_info):
-        # todo logic
+        
+        global global_session_info
+        global_session_info = session_info
 
-        output = vars(session_info).copy()  # Convert object to dictionary
-        output["usernames"] = list(session_info.usernames)  # Convert set to list
+        # Getting the session_info, for development purposes
+        # output = vars(session_info).copy()  # Convert object to dictionary
+        # output["usernames"] = list(session_info.usernames)  # Convert set to list
+
+        # f = open("stored_session_info.json", "a")
+        # f.write(json.dumps(output))
+        # f.close
 
         # Example:
         self.session_info = session_info
@@ -41,13 +55,25 @@ class Bot(ABot):
 
         #get user info
         prompt = "Make the user a teenage girl. Use only lowercase, and make her live somewhere trendy."
-        users=generateUsers(prompt)
+        users=generateUsers(prompt, session_info)
 
         # add user info
-        new_users=[]
-        for i in range(min(len(users),NUM_USERS)):
-            new_users.append(NewUser(username=users[i]['username'],name=users[i]['name'],description=users[i]['description'],location=users[i]['location']   ))
+        # new_users=[]
+        # for i in range(min(len(users),NUM_USERS)):
+        #     new_users.append(NewUser(username=users[i]['username'],name=users[i]['name'],description=users[i]['description'],location=users[i]['location']   ))
+        #     new_users.append(NewUser(username=users[len(users)-1-i]['username'],name=users[len(users)-1-i]['name'],description=users[len(users)-1-i]['description'],location=users[len(users)-1-i]['location']   ))
 
+        new_users = []
+        for i in range(min(len(users) // 2, NUM_USERS // 2)):  # Ensure we stay within bounds
+            new_users.append(NewUser(username=users[i]['username'],
+                                    name=users[i]['name'],
+                                    description=users[i]['description'],
+                                    location=users[i]['location']))
+            
+            new_users.append(NewUser(username=users[len(users)-1-i]['username'],
+                                    name=users[len(users)-1-i]['name'],
+                                    description=users[len(users)-1-i]['description'],
+                                    location=users[len(users)-1-i]['location']))
         self.users_post_info = {}
 
         # Fix later
@@ -71,13 +97,12 @@ class Bot(ABot):
         # Simulating how users post tweets over different time periods.
         self.users_post_info[user.username] = divide_into_random_subarrays(desiredTweets,totSessions)
 
-
         return new_users
 
     def generate_content(self, datasets_json, users_list):
         # todo logic
 
-        print(datasets_json.posts)
+        #print(datasets_json.posts)
         output = datasets_json.__dict__
 
         # with open("generate.txt", "a") as file:

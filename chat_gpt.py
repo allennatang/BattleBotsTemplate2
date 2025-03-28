@@ -83,8 +83,8 @@ def generateTweets(prompt, tweet_sample_size=TWEETS_SIZE):
     return tweets_data['tweets']
 
 
-def generateUsers(prompt, user_sample_size=USERS_SIZE):
-    users_dataset=getUsernames(user_sample_size)
+def generateUsers(prompt, session_info, user_sample_size=USERS_SIZE):
+    users_dataset=getUsernames(user_sample_size, session_info)
 
     # Prompt to generate new users
     user_prompt = f"""
@@ -108,6 +108,8 @@ def generateUsers(prompt, user_sample_size=USERS_SIZE):
     save_results_to_file(users_response_content,userSaveFile)
 
     parsed_users = []
+
+    # Append the GPT generated users
     for each_user in data["users"]:
         username = each_user["username"]
         name = each_user["name"]
@@ -116,6 +118,26 @@ def generateUsers(prompt, user_sample_size=USERS_SIZE):
 
         if name and username and description and location:
             parsed_users.append({"name": name, "username": username, "description": description, "location": location})
+
+    # Append the real users
+    try:
+        real_users = json.loads(users_dataset)
+        print("Valid JSON!")
+    except json.JSONDecodeError as e:
+        print("Invalid JSON:", e)
+    
+    
+    for each_user in real_users["users"]:
+        username = each_user["username"]
+        name = each_user["name"]
+        description = each_user["description"]
+        location = each_user["location"]
+
+        if name and username and description and location:
+            parsed_users.append({"name": name, "username": username, "description": description, "location": location})
+
+
+
     return parsed_users
 
 # print(generateUsers())

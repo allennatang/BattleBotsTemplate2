@@ -70,11 +70,13 @@ for user in all_users:
 random.shuffle(real_users['users'])
 
 # Select a random sample of real users and return as json object, to be passed to GPT as a prompt
-def getUsernames(n):
+def getUsernames(n, session_info):
 
+    real_users = session_info.users
     users_dict = {'users':[]}
+
     # Take a random sample of n posts and append them to the dictionary
-    selected_users = random.sample(real_users['users'], min(n, len(real_users['users'])))  # Avoid IndexError if n > len(real_posts)
+    selected_users = random.sample(real_users, min(n, len(real_users)))  # Avoid IndexError if n > len(real_posts)
 
     for user in selected_users:
         users_dict["users"].append(user)
